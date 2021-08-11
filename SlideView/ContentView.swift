@@ -40,7 +40,8 @@ struct ContentView_Previews: PreviewProvider {
 
 struct SlideView: View {
     
-   @Binding var value: String
+    @Binding var value: String
+
     
     var body: some View {
         VStack {
@@ -59,7 +60,7 @@ struct SlideView: View {
                     
                     Circle()
                         .frame(width: 50, height: 50)
-                        .position(x: calcSlide(width: geo.size.width), y: geo.frame(in: .local).midY)
+                        .position(x: calcSlide(width: geo.size.width) + 25, y: geo.frame(in: .local).midY)
                         
                     }
                 )
